@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+:root {
+  --white: hsl(0, 0%, 98%);
+  --gray: hsl(0, 0%, 41%);
+  --black: hsl(0, 0%, 8%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Epilogue', sans-serif;
+}
+
+body {
+  background-color: var(--white);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+}
+
+.navWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  margin-top: 10px;
+  margin-right: 80px;
+}
+
+.navContainer {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+}
+
+.navItem {
+  position: relative;
+  margin-right: 60px;
+}
+
+.navItem a {
+  text-decoration: none;
+  color: var(--gray);
+}
+
+.navItem a:hover {
+  color: var(--black);
+}
+
+.navItem a > span {
+  margin-right: 10px;
+}
+
+.subNavContainer {
+  position: absolute;
+  list-style-type: none;
+  top: 35px;
+  padding: 15px 20px;
+  font-size: 14px;
+  color: var(--gray);
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0px 12px 50px -8px rgba(0, 0, 0, 0.37);
+  -webkit-box-shadow: 0px 12px 50px -8px rgba(0, 0, 0, 0.37);
+}
+
+.feature-list {
+  right: 0;
+}
+
+.feature-list > .subNavItem {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 8px 0;
+}
+
+.feature-list a {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.company-list {
+  left: 0;
+}
+
+.company-list > .subNavItem {
+  padding: 8px 0;
+  min-width: 70px;
+}
+
+.hidden {
+  display: none;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+}
+
+.btn {
+  outline: none;
+  color: var(--gray);
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.login-btn {
+  margin-right: 20px;
+  background-color: var(--white);
+  border: none;
+}
+
+.login-btn:hover {
+  color: var(--black);
+}
+
+.register-btn {
+  background-color: var(--white);
+  border: 2px solid var(--gray);
+  border-radius: 15px;
+}
+
+.register-btn:hover {
+  color: var(--black);
+  border-color: var(--black);
+}
+
+
+
