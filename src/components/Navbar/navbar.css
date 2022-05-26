@@ -1,138 +1,217 @@
-@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
-
-:root {
-  --white: hsl(0, 0%, 98%);
-  --gray: hsl(0, 0%, 41%);
-  --black: hsl(0, 0%, 8%);
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Epilogue', sans-serif;
-}
-
-body {
-  background-color: var(--white);
+ul {
+  list-style: none;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
+  padding: 30px 15px 15px 15px;
+  margin-bottom: 10px;
+  position: relative;
+  margin: auto;
+  max-width: 1440px;
+  width: 100%;
 }
 
-.navWrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.logo {
-  margin-top: 10px;
-  margin-right: 80px;
+.menu {
+  cursor: pointer;
 }
 
 .navContainer {
-  list-style-type: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100vh;
+  width: 100%;
+  z-index: 999;
+}
+
+.navWrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  padding: 20px 20px;
+  height: 100vh;
+  width: 230px;
+  background-color: white;
+}
+
+.closeBtn {
+  align-self: flex-end;
+  margin-bottom: 20px;
+}
+
+.navList {
+  color: var(--gray);
+}
+
+.navListItem {
+  margin-bottom: 15px;
 }
 
 .navItem {
-  position: relative;
-  margin-right: 60px;
+  display: flex;
+  cursor: pointer;
 }
 
-.navItem a {
-  text-decoration: none;
-  color: var(--gray);
-}
-
-.navItem a:hover {
+.navItem:hover {
   color: var(--black);
 }
 
-.navItem a > span {
+.navItem svg {
+  margin-left: 10px;
+  align-self: center;
+}
+
+.subList {
+  margin: 10px 0 0 30px;
+}
+
+.subListItem {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.subListItem:hover {
+  color: var(--black);
+}
+
+.subListItem svg {
   margin-right: 10px;
 }
 
-.subNavContainer {
-  position: absolute;
-  list-style-type: none;
-  top: 35px;
+.buttons {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.btn {
   padding: 15px 20px;
-  font-size: 14px;
   color: var(--gray);
+}
+
+.btn:hover {
+  color: var(--black);
+  cursor: pointer;
+}
+
+.loginBtn {
+  border: none;
+  background-color: white;
+  
+}
+
+.registerBtn {
+  border: 1px solid var(--gray);
   border-radius: 10px;
   background-color: white;
-  box-shadow: 0px 12px 50px -8px rgba(0, 0, 0, 0.37);
-  -webkit-box-shadow: 0px 12px 50px -8px rgba(0, 0, 0, 0.37);
 }
 
-.feature-list {
-  right: 0;
-}
-
-.feature-list > .subNavItem {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 8px 0;
-}
-
-.feature-list a {
-  display: inline-block;
-  margin-left: 20px;
-}
-
-.company-list {
-  left: 0;
-}
-
-.company-list > .subNavItem {
-  padding: 8px 0;
-  min-width: 70px;
+.registerBtn:hover {
+  border-color: var(--black);
 }
 
 .hidden {
   display: none;
 }
 
-.buttons {
-  display: flex;
-  align-items: center;
-}
-
-.btn {
-  outline: none;
-  color: var(--gray);
-  padding: 10px 20px;
-  cursor: pointer;
-}
-
-.login-btn {
-  margin-right: 20px;
-  background-color: var(--white);
-  border: none;
-}
-
-.login-btn:hover {
+.active {
   color: var(--black);
 }
 
-.register-btn {
-  background-color: var(--white);
-  border: 2px solid var(--gray);
-  border-radius: 15px;
+@media screen and (min-width: 1200px){
+  nav {
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px 30px;
+  }
+  
+  .logo {
+    margin-top: 13px;
+  }
+
+  .menu { 
+    display: none;
+  }
+
+  .closeBtn {
+    display: none;
+  }
+
+  .navContainer {
+    display: block;
+    position: relative;
+    height: max-content;
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .navWrapper {
+    position: relative;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    height: auto;
+    width: auto;
+    background-color: transparent;
+  }
+
+  .navList {
+    display: flex;
+    margin-left: 70px;
+  }
+
+  .navListItem {
+    position: relative;
+    margin: 0 40px 0 0;
+  }
+
+  .subList {
+    position: absolute;
+    top: 40px;
+    margin: 0;
+    padding: 20px 30px;
+    background-color: var(--white);
+    border-radius: 10px;
+    box-shadow: 0px 5px 33px -10px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 0px 5px 33px -10px rgba(0, 0, 0, 0.5);
+  }
+
+  .featureList {
+    right: 0;
+  }
+
+  .companyList {
+    left: 0;
+  }
+
+  .companyList span {
+    width: 65px;
+  }
+
+  .subItem {
+    margin-left: 10px;
+  }
+
+  .buttons {
+    flex-direction: row;
+    margin: 0;
+  }
+  
+  .btn {
+    padding: 10px 30px;
+  }
+
+  .loginBtn {
+    margin-right: 15px;
+  }
 }
-
-.register-btn:hover {
-  color: var(--black);
-  border-color: var(--black);
-}
-
-
-

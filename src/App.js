@@ -1,9 +1,13 @@
-import Navbar from "./components/Navbar/Navbar";
-
+import Navbar from "./components/navbar/Navbar";
+import Hero from "./components/hero/Hero";
+import "./app.css"
 
 const App = () => {
   return (
-    <Navbar/>
+    <>
+      <Navbar/>
+      <Hero/>
+    </>
   );
 }
 
